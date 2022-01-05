@@ -1,23 +1,23 @@
 def findMin(nums):
     l = 0
     r = len(nums)-1
-
+    res = nums[l]
     while l<=r: #4 #6
 
-        if l == r :
-            return nums[l]
-        m = (l+r) // 2 #5
-        print(nums[l], nums[m], nums[r])
-        if   nums[l] > nums[m] and nums[m] < nums[r] : #4 #7
-            print('if')
-            print(nums[l], nums[m], nums[r])
-            l = m
-        elif nums[l] <= nums[m] and nums[m] <= nums[r]:
-            return nums[l]
-        else:
-            print('else')
-            print(nums[l], nums[m], nums[r])
-            r = m
+        if nums[l] <= nums[r]:
+            return min(res, nums[l])
+            break
+
+        mid = (l+r) // 2
+        res = min(res, nums[mid])
+
+        if nums[mid] >= nums[l]:
+            l = mid +1
+
+        else :
+            r = mid -1
+    return res
+
 
 ans = [4,5,6,7,0,1,2]
 print(findMin(ans))
