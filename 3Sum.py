@@ -9,8 +9,7 @@ def threeSum(nums):
 
     for i in range(len(nums)):
         for j in range(i+1, len(nums)):
-            if j != i :
-                value = -(i+j)
+                value = -(nums[i]+nums[j])
                 if value in value_map and value_map[value] != i and value_map[value] != j:
                     result.append([nums[i], nums[j], value])
     return result
