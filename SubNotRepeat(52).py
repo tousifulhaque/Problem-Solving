@@ -1,21 +1,17 @@
 def longestSubWithouRepeat(s):
-    maxLen = 0
-    curLen = 0
-    print(len(s))
-    for i in range(len(s)):
-        r = i - 1
-        while r >= 0 :
-            if s[i] == s[r]:
-                maxLen = max(maxLen, curLen)
-                curLen = 0
-                break
 
-            else:
-              r -= 1
-        curLen += 1
-        maxLen = max(maxLen, curLen)
+    charSet = set()
+    l = 0
+    res = 0
 
-    return maxLen
+    for r in range(len(s)):
+        while s[r] in charSet:
+            charSet.remove(s[l])
+            l += 1
+        charSet.add(s[r])
+        res = max(res, r-l+1)
+
+    return res
 
 
-print(longestSubWithouRepeat(' k a'))
+print(longestSubWithouRepeat("abcabcbb"))
