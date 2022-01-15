@@ -1,4 +1,5 @@
 def minimumSubString(s, t):
+
     tmap = {}
     smap = {}
     l = 0
@@ -11,8 +12,8 @@ def minimumSubString(s, t):
             tmap[i] += 1
         else:
             tmap[i] = 1
-
-    while r < len(s):
+    # "ADOBECODEBANC"
+    while r < len(s): #2
         if s[r] in tmap:  # B
             if s[r] in smap :
                 smap[s[r]] += 1
@@ -20,19 +21,21 @@ def minimumSubString(s, t):
                     l = r
                     smap = {s[r]: 1}
             else:
-                smap[s[r]] = 1
-            position_track.append(r)  # [0, 3, 5]
-            if smap == tmap:
-                if r - l + 1 < min_len:
-                    min_len = r - l + 1  # 5
-                    min_string = s[l:r + 1]
-                smap[s[l]] -= 1
-                l = position_track.pop(0)  # 3
+                smap[s[r]] = 1 # { a :1 , b :1}
+
+            while smap == tmap :
+                if (s[l] in t and (smap[s[l]] != 0)) :
+                    if r -l +1 < min_len:
+                        min_len = r - l + 1  # 2
+                        min_string = s[l:r + 1] #ab
+                    smap[s[l]] -=1
+                l += 1
+
         r += 1
     return min_string
 
 
-s = "ab"
-t = "b"
+s =  "ADOBECODEBANC"
+t =  'ABC'
 
 print(minimumSubString(s, t))
