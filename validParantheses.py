@@ -1,4 +1,4 @@
-    def isValid(self, s: str) -> bool:
+def isValid(self, s: str) -> bool:
         paran_dic = {
             '(' : ')',
             '{' : '}',
