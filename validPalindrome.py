@@ -12,8 +12,9 @@ def isPalindrome(s):
             return False
         l += 1 # 1
         r -= 1 # 
-    
+    print(stack[::-1])
     return True
+    
 
-s = ' '
+s = 'adfdsfljkdsjfl '
 print(isPalindrome(s))
