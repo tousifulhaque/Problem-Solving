@@ -21,3 +21,4 @@ def countSubstrings(s):
     return count     
 
 print(countSubstrings(s = "aaa"))
+
