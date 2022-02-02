@@ -1,4 +1,3 @@
-from os import link
 from DSA import linked_list
 
 class ReversedLinkedList(linked_list.LinkedList):
