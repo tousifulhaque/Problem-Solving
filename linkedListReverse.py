@@ -10,6 +10,8 @@ class ReversedLinkedList(linked_list.LinkedList):
         while itr != None:
             self.reversed_head = linked_list.Node(itr.data, self.reversed_head)
             itr = itr.next
+            print(id(itr))
+
         # return self.reversed_head
     
     def print_reverse(self):
@@ -31,6 +33,5 @@ if __name__ == '__main__':
     ll.insert_at_end(5)
     ll.insert_at_end(6)
     ll.reverse_link_list()
-    ll.print_reverse()
 
 
