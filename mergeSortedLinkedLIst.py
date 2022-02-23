@@ -2,7 +2,7 @@ class mergeLL:
         def __init__(self):
             self.head = None
 
-        def mergeSortLL(self)
+        def mergeSortLL(self):
             self.merged_head = None #(1, None)
             self.rev_merge = None
             itr_1 = list1
