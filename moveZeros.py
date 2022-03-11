@@ -5,7 +5,7 @@ def moveZeroes(self, nums):
         """
         readPointer = 0
         numberPointer = 0
-        
+
         if 0 in nums:
             while readPointer < len(nums) :
                 if nums[readPointer] != 0:
