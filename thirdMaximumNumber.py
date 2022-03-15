@@ -21,6 +21,7 @@ def thirdMaximumNumber(nums):
 
         else:
             pass
+
     if third_max == float('-inf'):
         return maxi
     
@@ -29,5 +30,5 @@ def thirdMaximumNumber(nums):
 
      
 if __name__ == "__main__":
-    nums = [1,2]
+    nums = [3,2,1]
     print(thirdMaximumNumber(nums))
