@@ -1,5 +1,3 @@
-from jinja2 import Undefined
-
 
 def thirdMaximumNumber(nums):
     maxi = float('-inf')
