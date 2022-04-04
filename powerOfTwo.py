@@ -19,6 +19,8 @@ class Solution(object):
 
         ####### Solution without any loop ########
 
+        ## This solution can also be done using a log2 function from math library
+
         if bin(num).count("1") == 1 and num > 0:
             return True
         
